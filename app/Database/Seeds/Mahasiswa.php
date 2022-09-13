@@ -26,9 +26,9 @@ class Mahasiswa extends Seeder
         ];
 
         // Simple Queries
-        $this->db->query('INSERT INTO mahasiswa (npm, nama, alamat, created_at) VALUES(:npm, :nama, :alamat, :created_at)', $data);
-
-        // Using Query Builder
-        $this->db->table('mahasiswa')->insert($data);
+        foreach($data as $dt) {
+            $this->db->table('mahasiswa')->insert($dt);
+        }
+        
     }
 }

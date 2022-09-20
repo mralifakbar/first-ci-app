@@ -8,6 +8,7 @@
                 <th scope="col">Nama</th>
                 <th scope="col">Alamat</th>
                 <th scope="col">Created At</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,16 @@
                 <td><?= $mhs['npm']; ?></td>
                 <td><?= $mhs['nama']; ?></td>
                 <td><?= $mhs['alamat']; ?></td>
+                <td><?= $mhs['created_at']; ?></td>
+                <td>
+                    <div class="d-flex">
+                        <a href="/edit/<?= $mhs['id']; ?>" class="btn btn-warning me-3">Edit</a>
+                        <form action="/delete/<?= $mhs['id']; ?>" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </td>
             </tr>
             <?php $no++; ?>
             <?php endforeach; ?>

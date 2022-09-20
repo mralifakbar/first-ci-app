@@ -13,7 +13,7 @@ class Mahasiswa extends Seeder
         $data = [
             [
                 'npm' => '2017051049',
-                'nama'    => 'Alif AKbar Kartadinata',
+                'nama'    => 'Alif Akbar Kartadinata',
                 'alamat' => 'Pringsewu',
                 'created_at' => Time::now(),
             ],
